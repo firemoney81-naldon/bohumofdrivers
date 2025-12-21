@@ -73,497 +73,465 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "2.5톤 이사 서비스",
-      "provider": {
-        "@type": "Organization",
-        "name": "2.5톤 이사 전문 업체",
-        "url": "https://yourdomain.com",
-        "logo": "https://yourdomain.com/logo.png"
-      },
-      "areaServed": {
-        "@type": "State",
-        "name": "대한민국"
-      },
-      "description": "2.5톤 이사 전문 서비스로 고객 맞춤형 포장 이사, 반포장 이사, 일반 이사를 제공합니다.",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "2.5톤 이사 서비스 가격",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "2.5톤 포장이사"
-            },
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "price": "500000",
-              "priceCurrency": "KRW",
-              "description": "포장, 운반, 정리 정돈까지 모든 것을 맡기는 편리한 서비스"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "2.5톤 반포장이사"
-            },
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "price": "400000",
-              "priceCurrency": "KRW",
-              "description": "포장은 업체에서, 정리는 고객이 하는 합리적인 서비스"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "@id": "https://yourdomain.com/2_5_ton_general_moving_service",
-              "name": "2.5톤 일반이사"
-            },
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "price": "300000",
-              "priceCurrency": "KRW",
-              "description": "큰 짐 운반만 업체에 맡기는 경제적인 서비스"
-            }
-          }
-        ]
-      },
-      "url": "https://yourdomain.com"
+      "@type": "HowTo",
+      "name": "운전병 군 경력 자동차보험 할인 신청 방법",
+      "description": "군 복무 중 운전병 경력을 인정받아 자동차 보험료를 할인받고 과납 보험료를 환급받는 절차입니다.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "병적증명서 발급",
+          "text": "정부24 또는 병무청을 통해 운전경력이 기재된 병적증명서를 발급받습니다."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "보험사 경력인정 신청",
+          "text": "가입한 보험사 고객센터를 통해 군 운전경력 인정 신청을 진행합니다."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "보험료 환급 조회",
+          "text": "보험개발원 AIPIS 시스템을 통해 과거에 더 낸 보험료가 있는지 확인하고 환급받습니다."
+        }
+      ],
+      "totalTime": "PT10M"
     }
     </script>
-    
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
         
         :root {
-            --primary-color: #4a90e2; /* 부드러운 블루 */
-            --secondary-color: #f5a623; /* 따뜻한 오렌지 */
-            --background-light: #f7f9fc; /* 아주 밝은 배경 */
-            --text-dark: #333333;
-            --text-medium: #666666;
-            --shadow-subtle: 0 4px 15px rgba(0, 0, 0, 0.05);
-            --border-radius-large: 15px;
+            --main-blue: #1e3a8a;
+            --soft-blue: #eff6ff;
+            --accent-orange: #f97316;
+            --text-dark: #1f2937;
+            --text-gray: #4b5563;
+            --white: #ffffff;
+            --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
         }
 
         body {
             font-family: 'Noto Sans KR', sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.7;
-            background-color: var(--background-light);
+            background: var(--bg-gradient);
             color: var(--text-dark);
-        }
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 3rem 1.5rem 5rem; /* 아래쪽 여백을 늘려 부드러운 곡선과 조화 */
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            border-bottom-left-radius: 50% 50px; /* 더 부드러운 곡선 */
-            border-bottom-right-radius: 50% 50px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(74, 144, 226, 0.9), rgba(57, 137, 255, 0.8));
-            z-index: -1;
-        }
-        h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin: 0 0 0.5rem 0;
-            letter-spacing: -1.5px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-        }
-        h2 {
-            color: var(--primary-color);
-            font-size: 2rem;
-            font-weight: 700;
-            margin-top: 2.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 4px solid var(--secondary-color); /* 강조 색상으로 밑줄 */
-            display: inline-block;
-            text-align: left;
-            margin-bottom: 1.5rem;
-        }
-        h3 {
-            color: var(--text-dark);
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-top: 1.5rem;
-            border-left: 5px solid var(--primary-color);
-            padding-left: 1rem;
-            margin-bottom: 1rem;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 2.5rem;
-            margin-top: 2rem;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            padding: 0.7rem 1.5rem;
-            border-radius: 25px;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        main {
-            max-width: 1000px;
-            margin: -3rem auto 2rem; /* 헤더 아래로 끌어올림 */
-            padding: 0 1rem;
-        }
-        section {
-            background-color: white;
-            padding: 2.5rem;
-            border-radius: var(--border-radius-large);
-            box-shadow: var(--shadow-subtle);
-            margin-bottom: 2.5rem;
-        }
-        section p, section ul, section dl {
-            font-size: 1.1rem;
-            color: var(--text-medium);
-        }
-        table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            margin-top: 1.5rem;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-        th, td {
-            padding: 1.5rem 1rem;
-            text-align: center;
-            font-size: 1.05rem;
-        }
-        th {
-            background-color: var(--primary-color);
-            color: white;
-            font-weight: 700;
-        }
-        tr:nth-child(even) {
-            background-color: #f0f8ff; /* 연한 하늘색 */
-        }
-        tr:nth-child(odd) {
-            background-color: #ffffff;
-        }
-        td {
-            border-bottom: 1px solid #e9eff5;
-        }
-        tr:last-child td {
-            border-bottom: none;
-        }
-        .price-highlight {
-            font-weight: 700;
-            color: var(--secondary-color);
-            font-size: 1.3rem;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: white;
-            font-weight: 700;
-            padding: 1.4rem 3rem;
-            border-radius: 50px;
-            text-decoration: none;
-            margin: 2rem 0;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            text-align: center;
-            box-shadow: 0 6px 15px rgba(245, 166, 35, 0.5);
-            font-size: 1.1rem;
-        }
-        .cta-button:hover {
-            background-color: #d88f1f;
-            transform: translateY(-5px);
-        }
-        .keyword-tags {
-            margin: 1.5rem 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-        .keyword-tags a {
-            background-color: #e6f0ff;
-            color: var(--primary-color);
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            font-weight: 400;
-        }
-        .keyword-tags a:hover {
-            background-color: #c0d8f0;
-        }
-        .external-links ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .external-links li {
-            margin-bottom: 15px;
-            border-left: 3px solid var(--secondary-color);
-            padding-left: 15px;
-        }
-        .external-links a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.05rem;
-        }
-        .external-links a:hover {
-            text-decoration: underline;
-        }
-        .check-list li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 12px;
-            list-style: none;
-            color: var(--text-dark);
-            font-size: 1.05rem;
-        }
-        .check-list li::before {
-            content: '●'; /* 더 부드러운 불릿 */
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: var(--primary-color);
-            font-weight: 700;
-            font-size: 1rem;
-        }
-        dl dt {
-            font-weight: 700;
-            color: var(--primary-color);
-            cursor: pointer;
-            border-bottom: 1px solid #eee;
-            padding: 15px 0;
-            transition: color 0.3s ease;
-            font-size: 1.15rem;
-        }
-        dl dt:hover {
-            color: var(--secondary-color);
-        }
-        dl dd {
-            margin: 0 0 1.5rem 0;
-            padding: 10px 15px;
-            background-color: #f0f8ff;
-            border-left: 5px solid var(--secondary-color);
-            border-radius: 0 0 8px 8px;
-            color: var(--text-medium);
-            font-size: 1.05rem;
-        }
-        footer {
-            text-align: center;
-            padding: 2.5rem;
-            font-size: 0.9rem;
-            color: #ffffff;
-            background-color: var(--primary-color);
-            border-top-left-radius: 30px;
-            border-top-right-radius: 30px;
-            margin-top: 3rem;
+            line-height: 1.8;
+            word-break: keep-all;
         }
 
-        /* 반응형 디자인 */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            h2 {
-                font-size: 1.5rem;
-            }
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
-            }
-            nav a {
-                padding: 0.5rem 1rem;
-            }
-            section {
-                padding: 1.5rem;
-            }
-            th, td {
-                padding: 0.8rem 0.5rem;
-                font-size: 0.9rem;
-            }
+        /* 시각적 계층 구조 강화 헤더 */
+        header {
+            background: linear-gradient(rgba(30, 58, 138, 0.95), rgba(30, 58, 138, 0.85)), 
+                        url('https://images.unsplash.com/photo-1590012314607-cda9d8ec35bc?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 5rem 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-orange);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -1.5px;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--main-blue);
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-orange);
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* 섹션 디자인 */
+        section {
+            background: var(--white);
+            padding: 3.5rem;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: var(--main-blue);
+            border-left: 8px solid var(--accent-orange);
+            padding-left: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: var(--text-dark);
+            margin-top: 2.5rem;
+        }
+
+        p {
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-gray);
+        }
+
+        /* SOLID 프로젝트 기반 데이터 표 */
+        .data-table-wrapper {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+        }
+
+        th {
+            background-color: var(--main-blue);
+            color: var(--white);
+            padding: 1.2rem;
+            font-weight: 500;
+        }
+
+        td {
+            padding: 1.2rem;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        tr:hover {
+            background-color: var(--soft-blue);
+        }
+
+        /* 체류시간 증대를 위한 인터랙티브 입력 영역 */
+        .calculator-box {
+            background: var(--soft-blue);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 2px dashed var(--main-blue);
+            margin: 2rem 0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            background: var(--accent-orange);
+            color: var(--white);
+            text-align: center;
+            padding: 1.2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #ea580c;
+            transform: translateY(-2px);
+        }
+
+        /* 태그 클라우드 */
+        .keyword-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1.5rem;
+        }
+
+        .tag {
+            background: #f1f5f9;
+            color: var(--main-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+
+        /* 외부 링크 스타일 */
+        .ref-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ref-links li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .ref-links li::before {
+            content: "🔗";
+            position: absolute;
+            left: 0;
+        }
+
+        .ref-links a {
+            color: var(--main-blue);
+            text-decoration: underline;
+        }
+
+        footer {
+            background: var(--main-blue);
+            color: var(--white);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        /* 하이라이트 */
+        .highlight {
+            color: var(--accent-orange);
+            font-weight: 700;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>2.5톤이사, 전문가에게 맡겨보세요!</h1>
-        <p>합리적인 가격으로 최고의 이사 서비스를 경험하세요.</p>
-        <nav>
-            <ul>
-                <li><a href="#service">서비스 종류</a></li>
-                <li><a href="#price">가격 안내</a></li>
-                <li><a href="#faq">자주 묻는 질문</a></li>
-                <li><a href="#contact">견적 문의</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section id="service">
-            <h2>2.5톤 이사 서비스 안내</h2>
-            <p><strong>2.5톤이사</strong>는 원룸, 1.5룸, 소형 아파트 및 빌라 이사에 가장 적합한 차량입니다. 저희는 고객님의 상황에 맞춰 포장이사, 반포장이사, 일반이사 등 맞춤형 서비스를 제공합니다. 모든 과정은 숙련된 전문가가 안전하고 신속하게 진행하며, 고객님의 소중한 물건을 내 집처럼 다룹니다.</p>
+<header>
+    <h1>운전병 운전자자동차보험 할인 가이드</h1>
+    <p>복무 기간의 땀방울이 보험료 절약으로 환급됩니다. 군 운전경력 인정제도의 모든 것을 파헤칩니다.</p>
+</header>
 
-            <div class="keyword-tags" aria-label="관련 이사 키워드">
-                <a href="#price">2.5톤이사비용</a>
-                <a href="#faq">2.5톤용달이사</a>
-                <a href="#service">2.5톤원룸이사</a>
-                <a href="#service">2.5톤포장이사</a>
-                <a href="#contact">2.5톤이사견적</a>
-            </div>
+<nav>
+    <ul>
+        <li><a href="#intro">경력인정제도란?</a></li>
+        <li><a href="#how-to">신청방법 및 서류</a></li>
+        <li><a href="#calc">예상 환급액 계산</a></li>
+        <li><a href="#refund">과납보험료 환급</a></li>
+        <li><a href="#external">신뢰자료</a></li>
+    </ul>
+</nav>
 
-            <h3>어떤 경우에 2.5톤 이사가 필요할까요?</h3>
-            <p>
-                2.5톤 이사는 보통 짐의 양이 <strong>1톤 트럭으로 운반하기에는 많고, 5톤 트럭을 부르기에는 애매한</strong> 경우에 최적의 선택이 됩니다. 1인 가구의 짐이 많거나, 2인 가구의 소형 가전 및 가구, 옷가지 등이 적당히 있을 때 효과적입니다. 특히, 침대, 냉장고, 세탁기 등 부피가 큰 가구가 포함된 원룸이나 1.5룸 이사에 용이합니다.
-            </p>
-        </section>
+<main>
+    <section id="intro">
+        <h2>운전병 출신을 위한 보험료 할인 및 경력인정 총정리</h2>
+        <p>대한민국 군필자 중 <strong>운전병(사병, 하사관 등)</strong>으로 복무한 경험이 있다면, 사회에 나와 처음 자동차보험에 가입할 때 남들보다 훨씬 저렴하게 시작할 수 있습니다. 보험사는 가입자의 '가입 경력'이 없을 경우 사고 위험이 높다고 판단하여 할증 요율을 적용하지만, 군 복무 중의 운전 기간을 경력으로 인정받으면 이 할증을 피할 수 있기 때문입니다.</p>
+        
+        <h3>군 운전경력 인정이 중요한 이유</h3>
+        <p>일반적으로 자동차보험에 처음 가입하면 가입경력요율이 적용되어 보험료가 상당히 비쌉니다. 하지만 군 운전경력을 최대 3년까지 인정받게 되면, 신규 가입자임에도 불구하고 3년 이상의 숙련된 운전자로 분류되어 <strong>최대 30% 이상의 보험료 절감 효과</strong>를 얻을 수 있습니다. 이는 연간 보험료가 100만원일 경우 약 30만원을 아낄 수 있는 엄청난 혜택입니다.</p>
 
-        <section id="price">
-            <h2>2.5톤 이사 비용 안내</h2>
-            <p>
-                <strong>2.5톤이사 비용</strong>은 이사 형태(포장/반포장/일반), 운반 거리, 작업 환경(사다리차 사용 여부, 엘리베이터 등), 짐의 양, 그리고 이사 날짜(손 없는 날, 주말)에 따라 달라질 수 있습니다. 저희는 투명하고 합리적인 비용 산정을 원칙으로 합니다.
-            </p>
+        <div class="keyword-wrap">
+            <a href="#" class="tag">운전병 자동차보험 할인</a>
+            <a href="#" class="tag">군 운전경력 인정</a>
+            <a href="#" class="tag">병적증명서 운전경력</a>
+            <a href="#" class="tag">보험가입경력요율</a>
+            <a href="#" class="tag">자동차보험료 환급</a>
+            <a href="#" class="tag">운전병 보험료 절약</a>
+        </div>
+    </section>
+
+    <section id="how-to">
+        <h2>운전병 경력 인정을 위한 필수 준비 서류 및 절차</h2>
+        <p>과거에는 개인이 직접 병적증명서를 발급받아 보험사에 팩스로 보내는 번거로운 절차가 필요했습니다. 하지만 최근에는 행정 정보 공유 체계가 개선되어 온라인으로도 간편하게 신청이 가능합니다.</p>
+        
+        <div class="data-table-wrapper">
             <table>
                 <thead>
                     <tr>
-                        <th>서비스 종류</th>
-                        <th>설명</th>
-                        <th>대략적인 비용 (VAT 별도)</th>
+                        <th>대상 구분</th>
+                        <th>필요 서류</th>
+                        <th>발급 및 신청처</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>포장이사</td>
-                        <td>고객님의 모든 짐을 전문가가 포장, 운반, 정리까지 해드립니다.</td>
-                        <td><span class="price-highlight">50만원 ~</span></td>
+                        <td>2014년 이후 전역자</td>
+                        <td>병적증명서 (필요 시)</td>
+                        <td>보험 가입 시 정보제공 동의만으로 자동 확인 가능</td>
                     </tr>
                     <tr>
-                        <td>반포장이사</td>
-                        <td>큰 짐은 저희가 포장 및 운반, 잔 짐은 고객님께서 직접 포장 및 정리합니다.</td>
-                        <td><span class="price-highlight">40만원 ~</span></td>
+                        <td>2014년 이전 전역자</td>
+                        <td>운전경력 기재 병적증명서</td>
+                        <td>정부24, 주민센터, 병무청</td>
                     </tr>
                     <tr>
-                        <td>일반이사</td>
-                        <td>모든 짐을 고객님이 직접 포장하고, 저희는 운반만 해드립니다.</td>
-                        <td><span class="price-highlight">30만원 ~</span></td>
+                        <td>간부 및 특수직</td>
+                        <td>군 운전경력확인서</td>
+                        <td>국방수송정보체계(DTIS)</td>
+                    </tr>
+                    <tr>
+                        <td>경찰/소방 복무</td>
+                        <td>경력증명서</td>
+                        <td>지방경찰청 또는 관할 소방본부</td>
                     </tr>
                 </tbody>
             </table>
-            <div style="text-align: center;">
-                <a href="#contact" class="cta-button" aria-label="2.5톤 이사 견적 문의하기">나에게 딱 맞는 견적 문의하기</a>
+        </div>
+
+        <h3>병적증명서 발급 시 주의사항</h3>
+        <p>병적증명서를 발급받을 때 가장 중요한 점은 <strong>'군 경력 포함'</strong> 항목에 체크해야 하며, 특히 <strong>'운전병과명'과 '운전기간'</strong>이 구체적으로 명시되도록 신청해야 한다는 점입니다. 이 내용이 누락되면 보험사에서 경력을 불인정할 수 있습니다.</p>
+    </section>
+
+    <section id="calc" class="calculator-box">
+        <h2>내 예상 보험료 할인 상담 및 환급 문의</h2>
+        <p>본인의 군 복무 기간과 정보를 입력해주시면, 전문가가 상세한 할인 혜택 및 환급 가능 여부를 분석하여 안내해 드립니다.</p>
+        
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">성함</label>
+                <input type="text" id="name" name="name" placeholder="실명을 입력해주세요" required>
             </div>
-        </section>
-
-        <section id="faq">
-            <h2>자주 묻는 질문</h2>
-            <p>고객님들이 <strong>2.5톤이사</strong>에 관해 가장 궁금해하시는 사항들을 모았습니다.</p>
-            <dl>
-                <dt tabindex="0" aria-expanded="false">2.5톤 이사와 2.5톤 용달 이사의 차이점은 무엇인가요?</dt>
-                <dd>2.5톤 이사는 일반적으로 운송, 포장, 정리 등 통합 서비스를 제공하는 것을 의미하며, 용달 이사는 운송(차량)만 빌리는 개념이 강합니다. 저희는 고객님의 필요에 따라 두 가지 모두 상담해 드립니다.</dd>
-                <dt tabindex="0" aria-expanded="false">이사 준비 시 반드시 확인해야 할 체크리스트는 무엇인가요?</dt>
-                <dd>
-                    <ul class="check-list">
-                        <li>이사 날짜 확정 및 예약: 최소 2주 전 확정하는 것이 좋습니다.</li>
-                        <li>불필요한 짐 정리: 이사 비용 절감을 위해 이사 전 버릴 짐을 분류합니다.</li>
-                        <li>관리사무소 통보: 이사 전후 엘리베이터 사용 가능 여부 등을 미리 확인합니다.</li>
-                        <li>공과금 정산: 전기, 가스, 수도 등 요금을 미리 정산합니다.</li>
-                        <li>주소 변경 서비스 신청: 우체국에서 제공하는 주소 이전 서비스를 신청하면 편리합니다.</li>
-                    </ul>
-                </dd>
-                <dt tabindex="0" aria-expanded="false">이사 중 파손이나 분실 시 보상은 어떻게 이루어지나요?</dt>
-                <dd>저희는 화물자동차 운수사업법에 따라 가입된 적재물배상책임보험을 통해 고객님의 소중한 짐을 안전하게 보호합니다. 만약의 사고 발생 시 투명하고 신속하게 보상 절차를 진행합니다.</dd>
-            </dl>
-        </section>
-
-        <section class="external-links">
-            <h2>이사 관련 유용한 정보</h2>
-            <p>신뢰성 있는 외부 자료를 통해 더 많은 정보를 얻고, 안전한 이사를 계획해 보세요.</p>
-            <ul>
-                <li><a href="https://namu.wiki/w/%ED%8F%AC%EC%9E%A5%EC%9D%B4%EC%82%AC" target="_blank">포장이사 관련 나무위키 정보</a></li>
-                <li><a href="https://www.ftc.go.kr/www/cpw/service/selectBusi.do?key=670&busiType=08" target="_blank">공정거래위원회 이사화물 표준약관 확인</a></li>
-                <li><a href="https://www.molit.go.kr/" target="_blank">이사 관련 법규 및 정책 (국토교통부)</a></li>
-                <li><a href="https://yourdomain.com/blog/moving_checklist" target="_blank">우리 업체가 제공하는 이사 체크리스트 블로그 게시글</a></li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>2.5톤 이사 견적 및 예약 문의</h2>
-            <p><strong>'2.5톤이사'</strong>는 짐의 양, 작업 환경에 따라 비용이 천차만별입니다. 전화나 온라인으로 문의하시면 정확한 견적을 무료로 상담해 드립니다.</p>
-            <div style="text-align: center;">
-                <p style="font-size: 1.2rem; font-weight: 700;">전화 문의 시 가장 신속한 상담이 가능합니다.</p>
-                <a href="tel:01012345678" class="cta-button" aria-label="전화로 견적 상담받기">전화로 바로 상담받기: 010-1234-5678</a>
+            <div class="form-group">
+                <label for="phone">연락처</label>
+                <input type="tel" id="phone" name="phone" placeholder="010-0000-0000" required>
             </div>
-            <ul>
-                <li><strong>이메일:</strong> <a href="mailto:contact@yourdomain.com">contact@yourdomain.com</a></li>
-            </ul>
-        </section>
-    </main>
+            <div class="form-group">
+                <label for="discharge-date">전역 시기</label>
+                <select id="discharge-date" name="discharge-date">
+                    <option value="after-2014">2014년 이후 전역</option>
+                    <option value="before-2014">2014년 이전 전역</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="driving-period">실제 군 운전 기간 (개월)</label>
+                <input type="number" id="driving-period" name="driving-period" placeholder="예: 21" required>
+            </div>
+            <div class="form-group">
+                <label for="current-insurance">현재 가입 중인 보험사</label>
+                <input type="text" id="current-insurance" name="current-insurance" placeholder="예: 삼성화재, 현대해상 등">
+            </div>
+            <div class="form-group">
+                <label for="message">추가 문의사항</label>
+                <textarea id="message" name="message" rows="5" placeholder="과거에 가입했던 자동차보험 기간 등 상세 내용을 적어주시면 정확한 환급 조회가 가능합니다."></textarea>
+            </div>
+            <div class="form-group">
+                <label><input type="checkbox" required> 개인정보 수집 및 이용에 동의합니다.</label>
+            </div>
+            <button type="submit" class="cta-button">무료 할인 분석 신청하기</button>
+        </form>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 2.5톤 이사 전문 업체. 모든 권리 보유.</p>
-    </footer>
+    <section id="refund">
+        <h2>이미 보험료를 냈다면? 과납보험료 환급 제도</h2>
+        <p>전역 후 몇 년 동안 이미 자동차보험료를 내 오셨나요? 걱정하지 마세요. <strong>과납보험료 환급 제도</strong>를 통해 소급 적용을 받을 수 있습니다. 최대 3년까지의 과거 경력을 소급하여 더 냈던 보험료를 이자까지 합쳐서 돌려받을 수 있습니다.</p>
+        
+        <h3>환급 신청 프로세스</h3>
+        <ul>
+            <li><strong>보험개발원 'AIPIS' 접속:</strong> 자동차보험 과납보험료 통합조회 시스템을 이용합니다.</li>
+            <li><strong>본인인증 및 조회:</strong> 미반영된 경력이 있는지 시스템상에서 즉시 확인합니다.</li>
+            <li><strong>환급금 청구:</strong> 조회가 완료되면 각 보험사에 개별적으로 또는 통합하여 환급을 요청합니다.</li>
+        </ul>
+        <p>실제로 많은 분들이 이 제도를 몰라 십 수만원에서 수십만원의 돈을 보험사에 잠재우고 있습니다. 지금 바로 확인해보는 것이 돈을 버는 길입니다.</p>
+    </section>
 
-    <script>
-        // FAQ 아코디언 기능 (접기/펼치기) - DD 태그가 보이도록 수정
-        document.querySelectorAll('dl dt').forEach((dt) => {
-            const dd = dt.nextElementSibling;
-            if (dd && dd.tagName === 'DD') {
-                dd.style.display = 'none'; // 초기 상태 숨김
-                
-                dt.addEventListener('click', () => {
-                    const isExpanded = dt.getAttribute('aria-expanded') === 'true';
-                    
-                    // 모든 항목을 닫고 상태를 'false'로 설정
-                    document.querySelectorAll('dl dt').forEach(item => {
-                        const itemDd = item.nextElementSibling;
-                        if (itemDd && itemDd.tagName === 'DD') {
-                            itemDd.style.display = 'none';
-                            item.setAttribute('aria-expanded', 'false');
-                            item.classList.remove('active');
-                        }
-                    });
+    <section id="faq">
+        <h2>함께 많이 찾는 질문 (FAQ)</h2>
+        <h3>Q1. 운전자보험도 할인이 되나요?</h3>
+        <p>일반적으로 '자동차보험'의 가입경력요율에서 할인이 발생합니다. 비용 손해를 보장하는 '운전자보험' 자체의 상품 구조에 따라 군 경력 할인이 직접 적용되지 않을 수 있으나, 자동차보험료 절감은 확실히 가능합니다.</p>
+        
+        <h3>Q2. 장교나 부사관도 가능한가요?</h3>
+        <p>물론입니다. 병적증명서상에 운전병과로 명시되어 있거나, 부대에서 발행한 운전경력증명서를 통해 실제 운전 업무를 수행했음이 입증된다면 동일하게 혜택을 받을 수 있습니다.</p>
 
-                    // 현재 항목만 열기
-                    if (!isExpanded) {
-                        dd.style.display = 'block';
-                        dt.setAttribute('aria-expanded', 'true');
-                        dt.classList.add('active');
-                    }
-                });
+        <h3>Q3. 법인차량을 운전한 경력도 인정되나요?</h3>
+        <p>군 운전병 외에도 관공서나 법인체에서 운전직으로 근무한 경력, 해외 자동차보험 가입 경력 등도 증빙 서류(재직증명서, 운전직 확인서 등)가 있다면 합산하여 인정받을 수 있습니다.</p>
+    </section>
 
-                dt.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        dt.click();
-                    }
-                });
-            }
+    <section id="external">
+        <h2>신뢰할 수 있는 외부 정보 및 공식 사이트</h2>
+        <p>보다 정확하고 공인된 정보 확인을 위해 아래의 공식 기관 사이트를 방문해 보시기 바랍니다.</p>
+        <ul class="ref-links">
+            <li><a href="https://www.gov.kr" target="_blank">정부24 - 병적증명서 즉시 발급 바로가기</a></li>
+            <li><a href="https://www.mma.go.kr" target="_blank">병무청 - 군 운전경력 자료 공유 시스템 안내</a></li>
+            <li><a href="http://aipis.kidi.or.kr" target="_blank">보험개발원 AIPIS - 자동차보험 과납보험료 환급 조회</a></li>
+            <li><a href="https://namu.wiki/w/%EC%9A%B4%EC%A0%84%EB%B3%91" target="_blank">나무위키 - 운전병 보직 및 혜택 정보</a></li>
+            <li><a href="https://www.fss.or.kr" target="_blank">금융감독원 - 자동차보험료 절약 금융꿀팁 안내</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <div style="max-width: 1100px; margin: 0 auto; padding: 0 1.5rem;">
+        <p>본 페이지는 운전병 출신 가입자의 권익 보호를 위해 정보를 제공하고 있습니다.</p>
+        <p>&copy; 2025 운전경력인정 도우미 서비스. All Rights Reserved.</p>
+        <div style="font-size: 0.8rem; margin-top: 2rem; opacity: 0.6;">
+            관련 키워드: 운전병 운전자보험 할인, 자동차보험 군경력 인정, 병적증명서 발급방법, 보험료 환급 신청, 1톤 용달 이사 비용, 포장이사 견적 비교, 군 면허 사회 면허 갱신
+        </div>
+    </div>
+</footer>
+
+<script>
+    // 체류 시간 측정 및 사용자 인터랙션 로그 (시뮬레이션)
+    document.querySelectorAll('input, select, textarea').forEach(element => {
+        element.addEventListener('focus', () => {
+            console.log(element.id + ' 필드 입력 시작 - 체류 시간 증가 유도');
         });
-    </script>
+    });
+
+    // 부드러운 스크롤 이동
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            window.scrollTo({
+                top: target.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
 
 
+
+	
 
 
 
@@ -632,4 +600,5 @@
 <link rel="preload" href="https://static.cdninstagram.com/rsrc.php/v4is0w4/yb/l/ko_KR/rFkiMP1qMyJ.js" as="script" crossorigin="anonymous" nonce="2Mv94Jjk" /><script src="https://static.cdninstagram.com/rsrc.php/v4is0w4/yb/l/ko_KR/rFkiMP1qMyJ.js" data-bootloader-hash="mgYHw9T" async="1" crossorigin="anonymous" data-p=":160" data-btmanifest="1027280358_main" data-c="1"></script>
 <link rel="preload" href="https://static.cdninstagram.com/rsrc.php/v4iT4H4/yV/l/ko_KR/zWc0yd6V0XD.js" as="script" crossorigin="anonymous" nonce="2Mv94Jjk" /><script src="https://static.cdninstagram.com/rsrc.php/v4iT4H4/yV/l/ko_KR/zWc0yd6V0XD.js" data-bootloader-hash="cDTWgQH" async="1" crossorigin="anonymous" data-p=":139" data-btmanifest="1027280358_main" data-c="1"></script>
 <link rel="preload" href="https://static.cdninstagram.com/rsrc.php/v4/yY/r/Eil-fzuGz0e.js" as="script" crossorigin="anonymous" nonce="2Mv94Jjk" /><script src="https://static.cdninstagram.com/rsrc.php/v4/yY/r/Eil-fzuGz0e.js" data-bootloader-hash="qgmbN7Z" async="1" crossorigin="anonymous" data-p=":74" data-btmanifest="1027280358_main" data-c="1"></script>
+
 
